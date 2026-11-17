@@ -93,8 +93,6 @@ export const InstructorSection: React.FC<InstructorSectionProps> = ({ onOpenBook
           {/* Right Column: Direct Contact Hub Card */}
           <div className="lg:col-span-5">
             <div className="bg-brand-forest rounded-[30px] sm:rounded-[36px] p-4 sm:p-8 md:p-9 text-white shadow-xl border border-sky-950/60 relative overflow-hidden">
-              <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-brand-accent/15 rounded-full blur-2xl pointer-events-none" />
-
               <div className="flex items-center gap-3 mb-5 sm:mb-6">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-accent/20 text-brand-accent flex items-center justify-center shrink-0">
                   <HeartHandshake className="w-5 h-5 sm:w-6 sm:h-6" />

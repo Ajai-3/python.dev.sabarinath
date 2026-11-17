@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, MessageCircle, ArrowRight, Sparkles, Phone } from 'lucide-react';
+import { Menu, X, MessageCircle, ArrowRight, Phone } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppLink } from '../constants/siteConfig';
 
 interface NavbarProps {
@@ -28,7 +28,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
       <div className="bg-brand-accent text-brand-forest py-1.5 sm:py-2 px-2.5 sm:px-4 text-xs font-bold border-b border-black/10 select-none">
         <div className="max-w-7xl mx-auto flex items-center justify-between sm:justify-center gap-2 sm:gap-4 text-center">
           <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
-            <Sparkles className="w-3.5 h-3.5 shrink-0 text-brand-forest animate-pulse" />
             {/* Mobile: guaranteed single line */}
             <span className="sm:hidden font-extrabold uppercase tracking-tight text-[11px] whitespace-nowrap">
               First Lesson 100% Free

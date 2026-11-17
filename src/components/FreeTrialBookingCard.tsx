@@ -62,7 +62,7 @@ export const FreeTrialBookingCard: React.FC = () => {
             {/* Left Graphic: Stylized Python Snake Illustration (Not logo, actual snake) */}
             <div className="shrink-0 flex items-center justify-center p-2">
               <svg
-                className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 drop-shadow-[0_10px_25px_rgba(255,212,59,0.25)]"
+                className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48"
                 viewBox="0 0 200 200"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

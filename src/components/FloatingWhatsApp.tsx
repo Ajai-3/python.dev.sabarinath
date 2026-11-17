@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MessageCircle, Mail, Phone, X, Sparkles, CheckCheck } from 'lucide-react';
+import { MessageCircle, Mail, Phone, X, CheckCheck } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppLink, getEmailLink, getPhoneLink } from '../constants/siteConfig';
 
 interface FloatingWhatsAppProps {
@@ -110,16 +110,13 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ onOpenBookin
                 <img
                   src={SITE_CONFIG.instructor.avatar}
                   alt={SITE_CONFIG.instructor.name}
-                  className="w-8 h-8 rounded-full object-cover object-top ring-2 ring-emerald-500"
+                  className="w-8 h-8 rounded-full object-cover object-top ring-2 ring-brand-forest/15"
                 />
-                <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-500 rounded-full ring-2 ring-white">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                </span>
               </div>
               <div className="leading-tight">
                 <div className="text-xs font-bold text-brand-forest flex items-center gap-1">
                   <span>{SITE_CONFIG.instructor.name}</span>
-                  <span className="text-[10px] font-semibold text-emerald-600 font-mono">• Online</span>
+                  <span className="text-[10px] font-semibold text-brand-text-tertiary font-mono">• Online</span>
                 </div>
                 <div className="text-[10px] text-gray-500 font-medium">Python Mentor</div>
               </div>
@@ -236,7 +233,6 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ onOpenBookin
             />
             <div>
               <div className="text-xs font-mono font-bold text-brand-accent uppercase tracking-wider flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 Sabarinath • Online Now
               </div>
               <div className="text-[11px] text-gray-300">1-on-1 Python Mentor</div>
@@ -271,7 +267,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ onOpenBookin
                 className="w-full py-2.5 px-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-xs flex items-center justify-between transition-colors border border-white/15"
               >
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-brand-accent" />
+                  <CheckCheck className="w-4 h-4 text-brand-accent" />
                   <span>Book Free 1-on-1 Trial</span>
                 </div>
                 <span className="text-[10px] text-brand-accent font-bold">100% Free</span>
@@ -295,8 +291,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ onOpenBookin
             </a>
           </div>
 
-          <div className="mt-3 pt-3 border-t border-sky-900/60 text-[11px] text-center text-sky-200 flex items-center justify-center gap-1">
-            <Sparkles className="w-3.5 h-3.5 text-brand-accent" />
+          <div className="mt-3 pt-3 border-t border-sky-900/60 text-[11px] text-center text-sky-200">
             <span>Zero upfront payment • First class free</span>
           </div>
         </div>

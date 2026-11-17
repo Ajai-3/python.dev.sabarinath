@@ -290,7 +290,7 @@ export const COURSE_HIGHLIGHTS: Highlight[] = [
     title: "First Lesson 100% For Free",
     description:
       "Take your first session with zero risk or upfront payment. Experience the teaching style, discuss your goals, and decide only if satisfied.",
-    iconName: "Sparkles",
+    iconName: "Gift",
     badge: "Zero Risk",
   },
   {

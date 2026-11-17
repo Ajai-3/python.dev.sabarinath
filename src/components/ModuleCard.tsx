@@ -5,7 +5,6 @@ import {
   ArrowRight, 
   FolderGit2, 
   CheckCircle2, 
-  Sparkles,
   Database,
   Terminal,
   ShieldCheck,
@@ -234,7 +233,7 @@ const MODULE_EDITORIAL_MAP: Record<string, ModuleEditorial> = {
       value: 'Full-Stack Analytics Web App',
     },
     bottomBadge: {
-      icon: <Sparkles className="w-4 h-4 text-brand-accent" />,
+      icon: <Code2 className="w-4 h-4 text-brand-accent" />,
       label: 'Connected Frontend',
       value: 'Vite + React 18 + Tailwind',
     },
@@ -401,7 +400,7 @@ export const ModuleCard: React.FC<ModuleCardProps> = ({
             {/* Phone Top Speaker / Dynamic Island */}
             <div className="flex justify-center mb-2 sm:mb-2.5">
               <div className="w-16 sm:w-20 h-3 sm:h-3.5 bg-black/70 rounded-full flex items-center justify-center">
-                <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-brand-accent mr-1.5 animate-pulse" />
+                <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-brand-accent mr-1.5" />
                 <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-white/20" />
               </div>
             </div>
@@ -449,7 +448,7 @@ export const ModuleCard: React.FC<ModuleCardProps> = ({
                 </div>
                 {editorial.deviceSnippet.accentLine && (
                   <div className="mt-1.5 sm:mt-2 text-[10px] text-sky-200 font-mono flex items-center gap-1">
-                    <Sparkles className="w-3 h-3 text-brand-accent" />
+                    <CheckCircle2 className="w-3 h-3 text-brand-accent" />
                     <span>{editorial.deviceSnippet.accentLine}</span>
                   </div>
                 )}

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
 /* =========================================================================
    THEME: Python Official Colors (Blue & Yellow)
    - Primary: Deep Python Navy (#0e273c) & Python Steel Blue (#306998)

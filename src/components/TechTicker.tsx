@@ -32,7 +32,7 @@ export const TechTicker: React.FC = () => {
                 ({tech.category})
               </span>
               <span className="text-brand-accent mx-5 sm:mx-7 text-sm font-bold select-none">
-                ✦
+                •
               </span>
             </div>
           ))}
@@ -47,7 +47,7 @@ export const TechTicker: React.FC = () => {
                 ({tech.category})
               </span>
               <span className="text-brand-accent mx-5 sm:mx-7 text-sm font-bold select-none">
-                ✦
+                •
               </span>
             </div>
           ))}

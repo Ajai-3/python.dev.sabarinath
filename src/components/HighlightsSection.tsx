@@ -1,6 +1,6 @@
 import React from 'react';
 import { COURSE_HIGHLIGHTS } from '../constants/courseData';
-import { Video, FolderGit2, UserCheck, Globe2, Sparkles, Languages, Check, ArrowRight } from 'lucide-react';
+import { Video, FolderGit2, UserCheck, Globe2, Gift, Languages, Check, ArrowRight } from 'lucide-react';
 import { SITE_CONFIG } from '../constants/siteConfig';
 
 const highlightIcons: Record<string, React.ReactNode> = {
@@ -8,7 +8,7 @@ const highlightIcons: Record<string, React.ReactNode> = {
   FolderGit2: <FolderGit2 className="w-6 h-6 text-brand-forest" />,
   UserCheck: <UserCheck className="w-6 h-6 text-brand-forest" />,
   Globe2: <Globe2 className="w-6 h-6 text-brand-forest" />,
-  Sparkles: <Sparkles className="w-6 h-6 text-brand-forest" />,
+  Gift: <Gift className="w-6 h-6 text-brand-forest" />,
   Languages: <Languages className="w-6 h-6 text-brand-forest" />,
 };
 
@@ -76,7 +76,6 @@ export const HighlightsSection: React.FC<HighlightsSectionProps> = ({ onOpenBook
         <div className="mt-12 p-8 sm:p-10 rounded-[32px] bg-brand-forest text-white flex flex-col md:flex-row items-center justify-between gap-6 border border-white/10 shadow-xl">
           <div className="space-y-2 text-center md:text-left">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-accent/20 text-brand-accent text-xs font-bold font-mono">
-              <Sparkles className="w-3.5 h-3.5 text-brand-accent" />
               <span>RISK FREE TRIAL</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white">

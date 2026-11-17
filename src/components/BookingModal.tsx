@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, CheckCircle, Send, Sparkles, AlertCircle, Languages, Target } from 'lucide-react';
+import { X, CheckCircle, Send, AlertCircle, Languages, Target } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppLink } from '../constants/siteConfig';
 import { CustomSelect, SelectOption } from './CustomSelect';
 
@@ -120,7 +120,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
         {!isSubmitted ? (
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-forest text-white text-xs font-semibold mb-3">
-              <Sparkles className="w-3.5 h-3.5 text-brand-accent" />
+              <CheckCircle className="w-3.5 h-3.5 text-brand-accent" />
               <span>100% Free • No Payment Required</span>
             </div>
 

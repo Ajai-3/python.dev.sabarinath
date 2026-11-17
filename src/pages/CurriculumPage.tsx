@@ -3,7 +3,6 @@ import { CURRICULUM_MODULES } from '../constants/courseData';
 import { getWhatsAppLink } from '../constants/siteConfig';
 import { ModuleCard } from '../components/ModuleCard';
 import { 
-  Sparkles, 
   ArrowRight, 
   MessageCircle 
 } from 'lucide-react';
@@ -101,7 +100,6 @@ export const CurriculumPage: React.FC<CurriculumPageProps> = ({ onOpenBookingMod
               onClick={() => onOpenBookingModal()}
               className="px-6 py-3 rounded-full bg-brand-accent hover:bg-brand-accent-hover text-brand-forest font-bold text-sm shadow inline-flex items-center gap-2"
             >
-              <Sparkles className="w-4 h-4" />
               <span>Claim Free First Lesson</span>
               <ArrowRight className="w-4 h-4" />
             </button>

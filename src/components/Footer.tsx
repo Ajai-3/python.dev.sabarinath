@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SITE_CONFIG, getWhatsAppLink, getEmailLink, getPhoneLink } from '../constants/siteConfig';
 import { CURRICULUM_MODULES } from '../constants/courseData';
-import { MessageCircle, Mail, Phone, Heart, Sparkles, Globe, ArrowUpRight } from 'lucide-react';
+import { MessageCircle, Mail, Phone, Heart, Languages, ArrowUpRight } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -39,11 +39,10 @@ export const Footer: React.FC = () => {
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-950/80 border border-sky-800/60 text-xs font-semibold text-brand-accent">
-                <Sparkles className="w-3.5 h-3.5" />
                 <span>First Lesson 100% Free</span>
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-950/80 border border-sky-800/60 text-xs font-semibold text-gray-200">
-                <Globe className="w-3.5 h-3.5 text-brand-accent" />
+                <Languages className="w-3.5 h-3.5 text-brand-accent" />
                 <span>English | Malayalam</span>
               </span>
             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SITE_CONFIG, getWhatsAppLink, getEmailLink, getPhoneLink } from '../constants/siteConfig';
-import { MessageCircle, Mail, Phone, MapPin, Sparkles, Send, CheckCircle2, Clock, Languages, AlertCircle } from 'lucide-react';
+import { MessageCircle, Mail, Phone, MapPin, Send, CheckCircle2, Clock, Languages, AlertCircle } from 'lucide-react';
 import { CustomSelect, SelectOption } from '../components/CustomSelect';
 
 const contactLangOptions: SelectOption[] = [
@@ -103,7 +103,7 @@ export const ContactPage: React.FC = () => {
             {/* WhatsApp Highlight Box */}
             <div className="p-6 rounded-2xl bg-brand-forest text-white border border-sky-950/60 shadow-xl relative overflow-hidden">
               <div className="flex items-center gap-2 text-xs font-mono font-bold text-brand-accent uppercase tracking-wider mb-2">
-                <Sparkles className="w-3.5 h-3.5" />
+                <MessageCircle className="w-3.5 h-3.5" />
                 <span>Instant Messaging</span>
               </div>
               <h2 className="text-2xl font-extrabold text-white">WhatsApp Chat</h2>
@@ -191,7 +191,7 @@ export const ContactPage: React.FC = () => {
             <div className="bg-white rounded-2xl p-6 sm:p-8 border border-brand-forest/15 shadow-sm">
               
               <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent/20 text-brand-forest text-xs font-bold w-fit mb-3">
-                <Sparkles className="w-3.5 h-3.5 text-brand-blue" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-brand-blue" />
                 <span>First Lesson 100% Free</span>
               </div>
 

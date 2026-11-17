@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Play, GraduationCap, Zap, Users, Rocket, Star, ShieldCheck, Trophy, Sparkles, User, Languages } from 'lucide-react';
+import { ArrowRight, Play, GraduationCap, Clock, Users, CheckCircle2, ShieldCheck, Languages } from 'lucide-react';
 import { SITE_CONFIG } from '../constants/siteConfig';
 
 interface HeroSectionProps {
@@ -9,21 +9,6 @@ interface HeroSectionProps {
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBookingModal }) => {
   return (
     <section id="hero" className="relative pt-8 pb-14 sm:pt-12 sm:pb-20 overflow-hidden">
-      {/* Decorative Dot Matrix on left and right */}
-      <div 
-        className="absolute left-2 sm:left-6 top-16 w-32 sm:w-44 h-48 opacity-40 pointer-events-none"
-        style={{
-          backgroundImage: 'radial-gradient(rgba(14, 39, 60, 0.25) 1.5px, transparent 1.5px)',
-          backgroundSize: '16px 16px'
-        }}
-      />
-      <div 
-        className="absolute right-2 sm:right-6 top-20 w-32 sm:w-44 h-48 opacity-40 pointer-events-none"
-        style={{
-          backgroundImage: 'radial-gradient(rgba(14, 39, 60, 0.25) 1.5px, transparent 1.5px)',
-          backgroundSize: '16px 16px'
-        }}
-      />
 
       {/* Bottom-left corner decorative concentric arcs */}
       <div className="absolute -left-12 -bottom-12 w-48 h-48 pointer-events-none opacity-80 z-0">
@@ -42,7 +27,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBookingModal }) 
           <div className="lg:col-span-7 space-y-6">
             
             {/* Headline with 'from fundamentals to' in brand-gold and yellow handdrawn underline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black text-brand-forest tracking-tight leading-[1.14]">
+            <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-black text-brand-forest tracking-tight leading-[1.14]">
               Complete Python<br />Development,<br />
               <span className="italic font-serif font-normal text-brand-gold">from fundamentals to</span><br />
               <span className="relative inline-block mt-1 sm:mt-1.5">
@@ -98,8 +83,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBookingModal }) 
             {/* 3 Feature Highlights: 1-on-1 Mentorship, Flexible Timings, Beginner to Advanced */}
             <div className="pt-4 flex flex-wrap items-center gap-6 sm:gap-8 border-t border-brand-forest/10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-brand-forest/5 text-brand-blue flex items-center justify-center shrink-0">
-                  <GraduationCap className="w-5 h-5 text-brand-blue" />
+                <div className="w-10 h-10 rounded-xl bg-brand-forest/5 text-brand-forest flex items-center justify-center shrink-0">
+                  <GraduationCap className="w-5 h-5 text-brand-forest" />
                 </div>
                 <div>
                   <div className="text-xs sm:text-sm font-extrabold text-brand-forest">1-on-1</div>
@@ -110,8 +95,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBookingModal }) 
               <div className="w-[1px] h-8 bg-brand-forest/10 hidden sm:block" />
 
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-brand-accent/25 text-brand-forest flex items-center justify-center shrink-0">
-                  <Zap className="w-5 h-5 text-brand-gold fill-current" />
+                <div className="w-10 h-10 rounded-xl bg-brand-forest/5 text-brand-forest flex items-center justify-center shrink-0">
+                  <Clock className="w-5 h-5 text-brand-forest" />
                 </div>
                 <div>
                   <div className="text-xs sm:text-sm font-extrabold text-brand-forest">Flexible</div>
@@ -122,8 +107,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBookingModal }) 
               <div className="w-[1px] h-8 bg-brand-forest/10 hidden sm:block" />
 
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-brand-forest/5 text-brand-blue flex items-center justify-center shrink-0">
-                  <Users className="w-5 h-5 text-brand-blue" />
+                <div className="w-10 h-10 rounded-xl bg-brand-forest/5 text-brand-forest flex items-center justify-center shrink-0">
+                  <Users className="w-5 h-5 text-brand-forest" />
                 </div>
                 <div>
                   <div className="text-xs sm:text-sm font-extrabold text-brand-forest">Beginner to</div>
@@ -135,29 +120,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBookingModal }) 
           </div>
 
           {/* RIGHT COLUMN: Sabarinath Hero Mentor Visual matching Screenshot 1 */}
-          <div className="lg:col-span-5 relative flex items-center justify-center py-6 sm:py-10 select-none">
+          <div className="lg:col-span-5 relative flex items-center justify-center py-6 sm:py-10 select-none max-w-full">
             
             {/* 1. Inner Warm Yellow Radial Disc */}
-            <div className="absolute inset-0 m-auto w-[270px] sm:w-[330px] h-[270px] sm:h-[330px] rounded-full bg-gradient-to-tr from-brand-accent/40 via-brand-accent/25 to-brand-accent/10 border border-brand-accent/30 z-0 pointer-events-none" />
+            <div className="absolute inset-0 m-auto w-[240px] sm:w-[330px] h-[240px] sm:h-[330px] rounded-full bg-gradient-to-tr from-brand-accent/40 via-brand-accent/25 to-brand-accent/10 border border-brand-accent/30 z-0 pointer-events-none" />
             
-            {/* 2. Middle Warm Yellow Disc (Extra Circle Requested by User) */}
-            <div className="absolute inset-0 m-auto w-[330px] sm:w-[410px] h-[330px] sm:h-[410px] rounded-full bg-gradient-to-br from-brand-accent/25 via-brand-accent/15 to-transparent border border-brand-accent/25 z-0 pointer-events-none" />
+            {/* 2. Middle Warm Yellow Disc */}
+            <div className="absolute inset-0 m-auto w-[280px] sm:w-[410px] h-[280px] sm:h-[410px] rounded-full bg-gradient-to-br from-brand-accent/25 via-brand-accent/15 to-transparent border border-brand-accent/25 z-0 pointer-events-none" />
 
-            {/* 3. Outer Ambient Halo */}
-            <div className="absolute inset-0 m-auto w-[390px] sm:w-[470px] h-[390px] sm:h-[470px] rounded-full bg-brand-accent/5 border border-brand-accent/20 z-0 pointer-events-none" />
+            {/* 3. Outer Ambient Halo (hidden on small mobile to prevent overflow) */}
+            <div className="hidden sm:block absolute inset-0 m-auto w-[390px] sm:w-[470px] h-[390px] sm:h-[470px] rounded-full bg-brand-accent/5 border border-brand-accent/20 z-0 pointer-events-none" />
 
-            {/* 4. Outer Concentric Dashed Ring */}
-            <div className="absolute inset-0 m-auto w-[420px] sm:w-[500px] h-[420px] sm:h-[500px] rounded-full border border-dashed border-brand-accent/35 z-0 pointer-events-none" />
+            {/* 4. Outer Concentric Dashed Ring (hidden on small mobile to prevent overflow) */}
+            <div className="hidden sm:block absolute inset-0 m-auto w-[420px] sm:w-[500px] h-[420px] sm:h-[500px] rounded-full border border-dashed border-brand-accent/35 z-0 pointer-events-none" />
 
-            {/* 5. Playful Top-Right Sunburst Rays */}
-            <div className="absolute top-1 right-10 sm:right-14 flex items-center gap-1.5 pointer-events-none z-0">
-              <span className="w-1.5 h-5 rounded-full bg-brand-accent rotate-12" />
-              <span className="w-1.5 h-6 rounded-full bg-brand-accent -rotate-6" />
-              <span className="w-1.5 h-4 rounded-full bg-brand-accent -rotate-45" />
-            </div>
-
-            {/* 6. Left Floating Element: Official Python Emblem Disk */}
-            <div className="absolute top-10 sm:top-12 -left-4 sm:-left-7 lg:-left-9 z-10 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-xl border border-gray-100 flex items-center justify-center p-3.5 -rotate-6 transition-transform hover:scale-105 duration-300">
+            {/* Left Floating Element: Official Python Emblem Disk */}
+            <div className="absolute top-8 sm:top-12 left-0 sm:-left-7 lg:-left-9 z-10 w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-white shadow-xl border border-gray-100 flex items-center justify-center p-2.5 sm:p-3.5 -rotate-6 transition-transform hover:scale-105 duration-300">
               <svg className="w-full h-full drop-shadow-md" viewBox="0 0 110 110" fill="none">
                 <path
                   d="M 54.8 5 C 28.5 5 30.1 16.4 30.1 16.4 L 30.2 28.2 L 55.4 28.2 L 55.4 31.8 L 19.3 31.8 C 19.3 31.8 5 30.2 5 56.6 C 5 83 15.9 81.9 15.9 81.9 L 22.4 81.9 L 22.4 72.8 C 22.4 72.8 21.8 61.9 32.8 61.9 L 57.9 61.9 C 57.9 61.9 67.8 62.5 67.8 52.8 L 67.8 19.8 C 67.8 19.8 69.4 5 54.8 5 Z"
@@ -172,63 +150,51 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBookingModal }) 
               </svg>
             </div>
 
-            {/* 7. Right Floating Element: Dark Code Terminal Snippet */}
-            <div className="absolute top-14 sm:top-18 -right-5 sm:-right-8 lg:-right-10 z-10 rounded-2xl bg-[#0f172a] text-white p-3.5 sm:p-4 shadow-2xl border border-white/10 w-48 sm:w-56 font-mono rotate-3 transition-transform hover:scale-105 duration-300">
+            {/* Right Floating Element: Dark Code Terminal Snippet */}
+            <div className="absolute top-10 sm:top-18 right-0 sm:-right-8 lg:-right-10 z-10 rounded-2xl bg-[#0b1b2b] text-white p-3 sm:p-4 shadow-2xl border border-white/10 w-44 sm:w-56 font-mono rotate-3 transition-transform hover:scale-105 duration-300">
               {/* Window control dots */}
-              <div className="flex items-center gap-1.5 mb-2.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-red-400" />
-                <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+              <div className="flex items-center gap-1.5 mb-2 sm:mb-2.5">
+                <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-red-400/80" />
+                <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-amber-400/80" />
+                <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-emerald-400/80" />
               </div>
-              <div className="text-[11px] sm:text-xs leading-relaxed select-none">
-                <div>
-                  <span className="text-purple-400 font-semibold">def</span>{' '}
-                  <span className="text-sky-300 font-semibold">learn</span>():
+              <div className="text-[10px] sm:text-xs leading-relaxed select-none">
+                <div className="text-sky-300">
+                  <span className="text-purple-400 font-semibold">from</span> app <span className="text-purple-400 font-semibold">import</span> live_mentor
                 </div>
-                <div className="pl-4 text-gray-200">
-                  <span>build_better</span>()
+                <div className="text-gray-300 mt-0.5">
+                  live_mentor.<span className="text-brand-accent font-semibold">start_free</span>()
                 </div>
               </div>
             </div>
 
-            {/* 6. Center Main Cutout: Sabarinath (/mentor.png) */}
+            {/* Center Main Cutout: Sabarinath (/mentor.png) */}
             <div className="relative z-20 flex items-center justify-center">
               <img
                 src={SITE_CONFIG.instructor.avatarCutout}
                 alt={`${SITE_CONFIG.instructor.name} - Python Full-Stack Mentor`}
-                className="w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[420px] h-auto object-contain select-none pointer-events-none drop-shadow-[0_20px_35px_rgba(14,39,60,0.22)]"
+                className="w-full max-w-[290px] sm:max-w-[400px] lg:max-w-[420px] h-auto object-contain select-none pointer-events-none drop-shadow-[0_20px_35px_rgba(14,39,60,0.22)]"
               />
             </div>
 
-            {/* 7. Bottom-Right Overlay Card: Sabarinath Identity */}
-            <div className="absolute bottom-6 sm:bottom-8 right-2 sm:right-4 z-30 bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-gray-100 px-3.5 py-2.5 sm:px-4 sm:py-3 flex items-center gap-3 backdrop-blur-md transition-transform hover:scale-105 duration-300">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-brand-accent flex items-center justify-center text-brand-forest shrink-0 shadow-sm">
-                <User className="w-5 h-5 text-brand-forest" strokeWidth={2.2} />
-              </div>
+            {/* Mentor Identity Badge */}
+            <div className="absolute bottom-2 sm:bottom-6 right-1 sm:right-6 z-30 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-brand-forest/10 px-3 sm:px-4 py-2 sm:py-3 flex items-center gap-2.5 sm:gap-3 transition-transform hover:scale-105 duration-300">
+              <img
+                src={SITE_CONFIG.instructor.avatar}
+                alt={SITE_CONFIG.instructor.name}
+                className="w-10 h-10 rounded-xl object-cover object-top border border-brand-forest/10 shrink-0"
+              />
               <div>
-                <div className="text-xs sm:text-sm font-extrabold text-brand-forest flex items-center gap-1.5 leading-tight">
-                  <span>{SITE_CONFIG.instructor.name}</span>
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-emerald-200" title="Active Mentor" />
+                <div className="text-xs sm:text-sm font-extrabold text-brand-forest leading-tight">
+                  {SITE_CONFIG.instructor.name}
                 </div>
-                <div className="text-[10px] sm:text-[11px] text-gray-500 font-medium leading-tight mt-0.5">
+                <div className="text-[11px] text-brand-text-tertiary font-medium leading-tight mt-0.5">
                   Python Full-stack Engineer & Mentor
                 </div>
-              </div>
-            </div>
-
-            {/* 8. Below Identity Card: Bilingual Pill with Handdrawn Curved Arrow */}
-            <div className="absolute -bottom-4 right-6 sm:right-10 z-30 flex items-center gap-2">
-              <div className="bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-gray-100 flex items-center gap-1.5 text-[11px] font-bold text-brand-forest select-none">
-                <Languages className="w-3.5 h-3.5 text-brand-blue" />
-                <span>English & Malayalam</span>
-              </div>
-              
-              {/* Playful Handdrawn Yellow Curved Arrow */}
-              <div className="relative w-7 h-7 sm:w-8 sm:h-8 text-brand-gold -rotate-12 pointer-events-none shrink-0">
-                <svg className="w-full h-full" viewBox="0 0 40 40" fill="none">
-                  <path d="M 10 5 C 25 10, 32 20, 25 32" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-                  <path d="M 18 28 L 25 33 L 30 25" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <div className="mt-1 flex items-center gap-1.5 text-[10px] font-bold text-brand-blue">
+                  <Languages className="w-3 h-3 text-brand-blue" />
+                  <span>English & Malayalam</span>
+                </div>
               </div>
             </div>
 
@@ -236,50 +202,50 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBookingModal }) 
 
         </div>
 
-        {/* BOTTOM FLOATING METRICS STRIP CARD */}
-        <div className="mt-8 sm:mt-8 bg-white/90 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-brand-forest/10 shadow-xl p-4 sm:p-6 grid grid-cols-2 lg:grid-cols-4 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-gray-200/70">
+        {/* BOTTOM METRICS STRIP CARD */}
+        <div className="mt-8 sm:mt-8 bg-white/95 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-brand-forest/10 shadow-xl p-4 sm:p-6 grid grid-cols-2 lg:grid-cols-4 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-gray-200/70">
           
-          {/* Metric 1: 100+ Students Trained */}
+          {/* Metric 1: 100+ Students Mentored */}
           <div className="flex items-center gap-4 pt-2 sm:pt-0">
-            <div className="w-12 h-12 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center shrink-0">
-              <Rocket className="w-6 h-6 text-brand-blue" />
+            <div className="w-11 h-11 rounded-xl bg-brand-forest/5 text-brand-forest flex items-center justify-center shrink-0">
+              <GraduationCap className="w-5 h-5 text-brand-forest" />
             </div>
             <div>
               <div className="text-2xl sm:text-3xl font-black text-brand-forest tracking-tight">100+</div>
-              <div className="text-xs font-semibold text-gray-500">Students Trained</div>
+              <div className="text-xs font-semibold text-brand-text-secondary">Students Mentored</div>
             </div>
           </div>
 
-          {/* Metric 2: 4.5/5 Student Rating */}
+          {/* Metric 2: 4.5 / 5 Student Rating */}
           <div className="flex items-center gap-4 pt-2 sm:pt-0 sm:pl-6">
-            <div className="w-12 h-12 rounded-2xl bg-brand-accent/20 text-brand-gold flex items-center justify-center shrink-0">
-              <Star className="w-6 h-6 fill-current text-brand-accent" />
+            <div className="w-11 h-11 rounded-xl bg-brand-forest/5 text-brand-forest flex items-center justify-center shrink-0">
+              <CheckCircle2 className="w-5 h-5 text-brand-forest" />
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-black text-brand-forest tracking-tight">4.5/5</div>
-              <div className="text-xs font-semibold text-gray-500">Student Rating</div>
+              <div className="text-2xl sm:text-3xl font-black text-brand-forest tracking-tight">4.5 / 5</div>
+              <div className="text-xs font-semibold text-brand-text-secondary">Average Student Rating</div>
             </div>
           </div>
 
           {/* Metric 3: 100% Satisfaction Guarantee */}
           <div className="flex items-center gap-4 pt-4 sm:pt-0 sm:pl-6">
-            <div className="w-12 h-12 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center shrink-0">
-              <ShieldCheck className="w-6 h-6 text-brand-blue" />
+            <div className="w-11 h-11 rounded-xl bg-brand-forest/5 text-brand-forest flex items-center justify-center shrink-0">
+              <ShieldCheck className="w-5 h-5 text-brand-forest" />
             </div>
             <div>
               <div className="text-2xl sm:text-3xl font-black text-brand-forest tracking-tight">100%</div>
-              <div className="text-xs font-semibold text-gray-500">Satisfaction Guarantee</div>
+              <div className="text-xs font-semibold text-brand-text-secondary">Satisfaction Guarantee</div>
             </div>
           </div>
 
           {/* Metric 4: 2+ Years Mentorship Experience */}
           <div className="flex items-center gap-4 pt-4 sm:pt-0 sm:pl-6">
-            <div className="w-12 h-12 rounded-2xl bg-brand-gold/15 text-brand-gold flex items-center justify-center shrink-0">
-              <Trophy className="w-6 h-6 text-brand-gold" />
+            <div className="w-11 h-11 rounded-xl bg-brand-forest/5 text-brand-forest flex items-center justify-center shrink-0">
+              <Clock className="w-5 h-5 text-brand-forest" />
             </div>
             <div>
               <div className="text-2xl sm:text-3xl font-black text-brand-forest tracking-tight">2+ Years</div>
-              <div className="text-xs font-semibold text-gray-500">Mentorship Experience</div>
+              <div className="text-xs font-semibold text-brand-text-secondary">Mentorship Experience</div>
             </div>
           </div>
 
