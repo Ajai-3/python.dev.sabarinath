@@ -77,8 +77,8 @@ export const SITE_CONFIG: {
     languages: ["English", "Malayalam"],
     bio: "Passionate developer and educator specializing in taking students from absolute beginners to job-ready Python full-stack developers. Known for friendly, patient 1-on-1 mentoring with bilingual explanations in English and Malayalam.",
     tagline: "Practical, code-first mentoring tailored to your individual learning pace.",
-    avatar: "/sabarinath_mentor.jpg",
-    avatarCutout: "/mentor.png",
+    avatar: "/sabarinath_mentor.webp",
+    avatarCutout: "/mentor.webp",
   },
   socials: {
     github: "https://github.com",
@@ -90,6 +90,7 @@ export const SITE_CONFIG: {
  * WhatsApp link generator with custom message
  */
 export const getWhatsAppLink = (customMsg?: string): string => {
+  if (!SITE_CONFIG.contact.whatsappNumber) return '#';
   const msg = customMsg || SITE_CONFIG.contact.whatsappDefaultMessage;
   return `https://wa.me/${SITE_CONFIG.contact.whatsappNumber}?text=${encodeURIComponent(msg)}`;
 };
@@ -98,6 +99,7 @@ export const getWhatsAppLink = (customMsg?: string): string => {
  * Mailto link generator
  */
 export const getEmailLink = (subject?: string, body?: string): string => {
+  if (!SITE_CONFIG.contact.email) return '#';
   const sub = subject || "Enquiry: Complete Python Development Course";
   const b = body || "Hi Sabari,\n\nI would like to inquire about the Python tuition classes and schedule my free first lesson.\n\nThank you!";
   return `mailto:${SITE_CONFIG.contact.email}?subject=${encodeURIComponent(sub)}&body=${encodeURIComponent(b)}`;
@@ -107,5 +109,5 @@ export const getEmailLink = (subject?: string, body?: string): string => {
  * Phone call link generator
  */
 export const getPhoneLink = (): string => {
-  return `tel:${SITE_CONFIG.contact.phoneRaw}`;
+  return SITE_CONFIG.contact.phoneRaw ? `tel:${SITE_CONFIG.contact.phoneRaw}` : '#';
 };
