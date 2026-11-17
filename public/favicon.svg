@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+  <defs>
+    <!-- Snake Blue Gradient (Python Cyan to Royal Blue) -->
+    <linearGradient id="pyBlueGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="40%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Snake Yellow Gradient (Warm Golden Yellow) -->
+    <linearGradient id="pyYellowGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="35%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+
+    <!-- Golden Swoosh Gradient -->
+    <linearGradient id="pySwooshGrad" x1="0%" y1="30%" x2="100%" y2="70%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+
+    <!-- Graduation Cap Gradients -->
+    <linearGradient id="capTopGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <linearGradient id="capBandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="50%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+
+    <linearGradient id="tasselGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="60%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="logoShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0e273c" flood-opacity="0.16" />
+    </filter>
+  </defs>
+
+  <g filter="url(#logoShadow)">
+    <!-- 1. DYNAMIC GOLDEN SWOOSH / ORBITAL ARC -->
+    <path
+      d="M 16 155 C 10 196, 65 224, 138 210 C 95 212, 45 198, 32 170 C 22 148, 26 122, 42 100 C 24 116, 18 135, 16 155 Z"
+      fill="url(#pySwooshGrad)"
+    />
+    <path
+      d="M 130 210 C 178 202, 220 178, 246 142 C 212 172, 168 198, 130 210 Z"
+      fill="url(#pySwooshGrad)"
+    />
+
+    <!-- 2. PYTHON SNAKES (Centered & Scaled) -->
+    <g transform="translate(54, 52) scale(1.42)">
+      <!-- Blue Snake (Top) -->
+      <path
+        d="M 51.5 8 C 24.8 8 26.5 19.5 26.5 19.5 L 26.6 31.5 L 52.2 31.5 L 52.2 35.1 L 15.6 35.1 C 15.6 35.1 1 33.5 1 60.3 C 1 87.1 12 86 12 86 L 18.6 86 L 18.6 76.8 C 18.6 76.8 18 65.8 29.1 65.8 L 54.6 65.8 C 54.6 65.8 64.6 66.4 64.6 56.6 L 64.6 23 C 64.6 23 66.2 8 51.5 8 Z"
+        fill="url(#pyBlueGrad)"
+      />
+      <!-- Blue Snake Eye -->
+      <circle cx="37.5" cy="21.2" r="4.2" fill="#081622" />
+
+      <!-- Yellow Snake (Bottom) -->
+      <path
+        d="M 53.5 109 C 80.2 109 78.5 97.5 78.5 97.5 L 78.4 85.5 L 52.8 85.5 L 52.8 81.9 L 89.4 81.9 C 89.4 81.9 104 83.5 104 56.7 C 104 29.9 93 31 93 31 L 86.4 31 L 86.4 40.2 C 86.4 40.2 87 51.2 75.9 51.2 L 50.4 51.2 C 50.4 51.2 40.4 50.6 40.4 60.4 L 40.4 94 C 40.4 94 38.8 109 53.5 109 Z"
+        fill="url(#pyYellowGrad)"
+      />
+      <!-- Yellow Snake Eye -->
+      <circle cx="67.5" cy="95.8" r="4.2" fill="#081622" />
+    </g>
+
+    <!-- 3. GRADUATION CAP (MORTARBOARD) Crowning Blue Snake -->
+    <g transform="translate(116, 50) rotate(-11)">
+      <!-- Skullcap Band resting on snake head -->
+      <path
+        d="M -24 10 C -18 1, 18 1, 24 10 L 22 17 C 16 9, -16 9, -22 17 Z"
+        fill="url(#capBandGrad)"
+      />
+      <!-- Skullcap front rim highlight -->
+      <path
+        d="M -22 14 C -16 7, 16 7, 22 14 C 18 17.5, -18 17.5, -22 14 Z"
+        fill="#f8fafc"
+      />
+
+      <!-- Mortarboard 3D Lower Edge Thickness -->
+      <polygon points="0,-21 54,0 0,21 -54,0" fill="#94a3b8" />
+      <polygon points="0,-18 54,3 0,24 -54,3" fill="#64748b" />
+
+      <!-- Mortarboard Diamond Top Surface -->
+      <polygon points="0,-21 54,0 0,21 -54,0" fill="url(#capTopGrad)" stroke="#e2e8f0" stroke-width="1" />
+
+      <!-- Cap Center Button/Pin -->
+      <ellipse cx="0" cy="0" rx="3.5" ry="2.5" fill="#64748b" />
+      <ellipse cx="0" cy="-0.5" rx="2.4" ry="1.6" fill="#f8fafc" />
+
+      <!-- Golden Tassel Cord arching over to the right -->
+      <path
+        d="M 0 0 C 22 0, 44 12, 42 34"
+        stroke="url(#tasselGrad)"
+        stroke-width="2.8"
+        fill="none"
+        stroke-linecap="round"
+      />
+      <!-- Tassel Ring Connector -->
+      <ellipse cx="42" cy="33" rx="3" ry="2" fill="#f59e0b" />
+
+      <!-- Tassel Bell / Fringe -->
+      <path
+        d="M 38 34 C 37 36, 36 44, 34 52 C 38 54, 46 54, 50 52 C 48 44, 47 36, 46 34 Z"
+        fill="url(#tasselGrad)"
+      />
+      <ellipse cx="42" cy="51.5" rx="6" ry="2" fill="#ca8a04" />
+    </g>
+  </g>
+</svg>
