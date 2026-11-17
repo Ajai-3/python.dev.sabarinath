@@ -3,9 +3,9 @@
  * Website URL, phone number, and email are configured via .env with fallbacks.
  */
 
-const envUrl = typeof import.meta !== 'undefined' && import.meta.env?.VITE_SITE_URL ? import.meta.env.VITE_SITE_URL : 'https://python-mentor.dev';
-const envPhone = typeof import.meta !== 'undefined' && import.meta.env?.VITE_CONTACT_PHONE ? import.meta.env.VITE_CONTACT_PHONE : '+91 949 643 24 90';
-const envEmail = typeof import.meta !== 'undefined' && import.meta.env?.VITE_CONTACT_EMAIL ? import.meta.env.VITE_CONTACT_EMAIL : 'sabarin992@gmail.com';
+const envUrl = (import.meta.env.VITE_SITE_URL || '').trim();
+const envPhone = (import.meta.env.VITE_CONTACT_PHONE || '').trim();
+const envEmail = (import.meta.env.VITE_CONTACT_EMAIL || '').trim();
 
 // Automatically clean phone digits for WhatsApp and tel: links
 const rawPhoneDigits = envPhone.replace(/\D/g, '');
