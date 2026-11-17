@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================================
+   THEME: Python Official Colors (Blue & Yellow)
+   - Primary: Deep Python Navy (#0e273c) & Python Steel Blue (#306998)
+   - Accent: Iconic Python Yellow / Gold (#FFD43B)
+   - Surface: Warm Editorial Cream (#FBF9F4)
+   
+   To revert to the Green theme at any time, swap the active :root block below.
+   ========================================================================= */
+
+/* --- ACTIVE: Python Blue & Yellow Theme --- */
+:root {
+  --color-surface-base: #000000;
+  --color-surface-page: #FBF9F4;
+  --color-surface-card: #FFFFFF;
+  --color-surface-strong: #0e273c;
+  --color-forest-default: #0e273c; /* Deep Python Navy (Primary brand) */
+  --color-forest-light: #1a4263;   /* Medium Python Navy */
+  --color-forest-dark: #081622;    /* Midnight Navy */
+  --color-accent-default: #FFD43B; /* Official Python Yellow */
+  --color-accent-hover: #F0C428;   /* Warm Python Gold Hover */
+  --color-accent-muted: #FEF3C7;   /* Soft Yellow tint */
+  --color-accent-subtle: #FFFBEB;  /* Ultra subtle cream */
+  --color-blue-accent: #306998;    /* Official Python Steel Blue */
+  --color-blue-dark: #1f4f78;      /* Deep Python Blue */
+  --color-text-primary: #0e273c;   /* Deep Navy */
+  --color-text-secondary: #24455f; /* Medium Slate Navy */
+  --color-text-tertiary: #5a778e;  /* Muted Slate */
+  --color-text-inverse: #ffffff;
+  --color-border-subtle: #E2E8F0;
+}
+
+/* --- BACKUP: Forest Green & Emerald Theme (Uncomment to instantly restore) ---
+:root {
+  --color-surface-base: #000000;
+  --color-surface-page: #FBF9F4;
+  --color-surface-card: #FFFFFF;
+  --color-surface-strong: #0f3221;
+  --color-forest-default: #0f3221;
+  --color-forest-light: #174730;
+  --color-forest-dark: #0a2216;
+  --color-accent-default: #2ac864;
+  --color-accent-hover: #24b258;
+  --color-accent-muted: #dff7e7;
+  --color-accent-subtle: #f0fdf4;
+  --color-blue-accent: #174730;
+  --color-blue-dark: #0a2216;
+  --color-text-primary: #0e3727;
+  --color-text-secondary: #295442;
+  --color-text-tertiary: #5b786a;
+  --color-text-inverse: #ffffff;
+  --color-border-subtle: #E7E3D8;
+}
+*/
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--color-surface-page);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FBF9F4;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-forest-default);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-forest-light);
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Infinite Marquee animations (Hardware-accelerated, seamless infinite loop) */
+@keyframes marquee-left-to-right {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes marquee-right-to-left {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-ltr {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-left-to-right 42s linear infinite;
+}
+
+.animate-marquee-ltr:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-rtl {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-right-to-left 42s linear infinite;
+}
+
+.animate-marquee-rtl:hover {
+  animation-play-state: paused;
+}
+
+/* Smooth focus rings for WCAG 2.2 AA accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent-default);
+  outline-offset: 3px;
+}
