@@ -10,7 +10,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ onOpenBookin
   const [isOpen, setIsOpen] = useState(false);
   const [showScrollPopup, setShowScrollPopup] = useState(false);
   
-  const hideTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isHoveredRef = useRef<boolean>(false);
 
   useEffect(() => {
